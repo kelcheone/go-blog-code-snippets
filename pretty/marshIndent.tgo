@@ -1,0 +1,31 @@
+package main
+
+import (
+  "encoding/json"
+  "fmt"
+  "github.com/TylerBrock/colorjson"
+)
+
+
+func main() {
+
+  data := map[string]interface{}{
+    "name": "Kevin",
+    "age":  30,
+    "address": map[string]interface{}{
+      "street": "123 Main St",
+      "city":   "New York",
+      "state":  "NY",
+    },
+  }
+
+  json, err := json.MarshalIndent(data, "", "  ")
+  if err != nil {
+    panic(err)
+  }
+
+
+//  fmt.Println(string(json))
+s, _ := colorjson.Marshal(json)
+fmt.Println(string(s))
+}
