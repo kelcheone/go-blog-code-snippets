@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"go.uber.org/zap"
@@ -11,6 +12,8 @@ func main() {
 	// Define a custom level for the "Notice" level
 	noticeLevel := zap.NewAtomicLevelAt(zapcore.InfoLevel + 1)
 
+	fmt.Println(zapcore.Level(-1))
+
 	// Create a new logger with a custom "Notice" level
 	logger := zap.New(zapcore.NewCore(
 		zapcore.NewJSONEncoder(zap.NewProductionEncoderConfig()),
@@ -19,7 +22,7 @@ func main() {
 	))
 
 	// Log a message with the custom "Notice" level
-	logger.With(zap.String("level", "notice")).Notice("This is a custom notice message")
+	logger.With(zap.String("level", "notice")).Info("This is a custom notice message")
 
 	// Log a message with the standard "Info" level
 	logger.Info("This is a standard info message")
