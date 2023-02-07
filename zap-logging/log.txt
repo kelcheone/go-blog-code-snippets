@@ -1,0 +1,12 @@
+{"level":"info","ts":1675770995.0770955,"msg":"Hello World!"}
+{"level":"info","ts":1675770995.0772157,"msg":"Go can be fun!","level":"info"}
+{"level":"info","ts":1675770995.077278,"msg":"Go can be fun!","level":"info","count":1,"is_active":true,"price":10.99}
+{"level":"info","ts":1675771882.02229,"msg":"Hello World!"}
+{"level":"info","ts":1675771882.024423,"msg":"Go can be fun!","level":"info"}
+{"level":"info","ts":1675771882.02456,"msg":"Go can be fun!","level":"info","count":1,"is_active":true,"price":10.99}
+{"level":"info","message":"Configured logger","foo":"bar"}
+{"level":"info","message":"Configured logger","foo":"bar","level":"info"}
+{"level":"info","message":"Configured logger","foo":"bar"}
+{"level":"warn","message":"Configured logger","foo":"bar","level":"info"}
+{"level":"info","message":"Configured logger","foo":"bar"}
+{"level":"warn","message":"Configured logger","foo":"bar","level":"info"}
