@@ -2,13 +2,16 @@ package main
 
 import (
   "fmt"
-  "time"
+  "sync"
 )
 
 func main() {
+  var wg sync.WaitGroup
+  wg.Add(1)
   go func() {
     fmt.Println("Hello from goroutine")
+    wg.Done()
   }()
-  time.Sleep(1 * time.Second)
+  wg.Wait()
   fmt.Println("Hello from main")
 }
