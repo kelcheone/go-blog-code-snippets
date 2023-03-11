@@ -1,0 +1,11 @@
+language: &language
+  name: Golang
+  version: 1.20
+
+compiler:
+  name: Go Compiler
+  language: *language
+
+runtime:
+  name: Go Runtime
+  language: *language

@@ -1,0 +1,10 @@
+contributors:
+  - &kevin Kevin Kelche
+  - John Doe
+title: "Golang YAML"
+date: 11 March 2023
+tags:
+  - golang
+  - yaml
+draft: true
+author: *kevin
