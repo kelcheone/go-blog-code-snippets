@@ -1,0 +1,16 @@
+# A table
+[server]
+# Define a key-value pair
+host = "localhost"
+port = 8080
+running = true
+
+# A nested table
+[server.development]
+host = "localhost"
+port = 8080
+running = true
+
+# An array
+[server.development.hosts]
+hosts = ["localhost", "123.34.12.09"]

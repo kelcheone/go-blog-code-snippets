@@ -1,0 +1,5 @@
+[Postgres]
+  server = "123.34.56.78"
+  port = 5432
+  username = "postgres"
+  password = "postgres"
