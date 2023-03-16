@@ -1,5 +1,6 @@
-[Postgres]
-  server = "localhost"
-  port = 5432
-  username = "postgres"
-  password = "postgres"
+
+[Database]
+  Password = "secret"
+  Port = 3306
+  Server = "localhost"
+  Username = "user123"
