@@ -1,0 +1,46 @@
+package main
+
+/*
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '1575552d06db25'
+EMAIL_HOST_PASSWORD = 'f6f995d08820f7'
+EMAIL_PORT = '2525'
+*/
+
+import (
+	"net/smtp"
+	"os"
+
+	"github.com/joho/godotenv"
+)
+
+func main() {
+	// mailtrap account config
+
+	// message data
+	from := "master@your.domain"
+
+	to := []string{"kel@example.com"}
+
+	message := []byte(`To: kate.doe@example.com
+
+			From: john.doe@your.domain
+
+			Subject: Why aren’t you using Mailtrap yet?
+
+			Here’s the space for your great sales pitch`)
+
+	// send mail
+	godotenv.Load()
+	username := os.Getenv("EMAIL_HOST_USER")
+	passwd := os.Getenv("EMAIL_HOST_PASSWORD")
+	host := os.Getenv("EMAIL_HOST")
+
+	auth := smtp.PlainAuth("", username, passwd, host)
+	smtpHost := host + ":" + os.Getenv("EMAIL_PORT")
+
+	if err := smtp.SendMail(smtpHost, auth, from, to, message); err != nil {
+		panic(err)
+	}
+
+}
