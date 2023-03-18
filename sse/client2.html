@@ -1,0 +1,28 @@
+<!-- A client to receive server sent events -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>server sent Events</title>
+  </head>
+  <body>
+    <!-- server is located at localhost:8080 -->
+    <p id="title" style="font-size: 30px; font-weight: bold">
+      Server Sent Events
+    </p>
+    <p id="output"></p>
+    <script>
+      let eventSource = new EventSource("http://localhost:8080/events");
+      eventSource.onmessage = function (msg) {
+        console.log(msg);
+        document.getElementById("output").innerHTML = msg.data;
+      };
+
+      eventSource.onerror = function (err) {
+        console.log(err);
+      };
+    </script>
+  </body>
+</html>
