@@ -1,1 +1,1 @@
-code snippets for [https:www.kelche.co](Kelche.co Blog)
+code snippets for [Kelche.co Blog](https://www.kelche.co)
